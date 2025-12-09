@@ -37,7 +37,7 @@ try {
   
   console.log('\nCreating submission zip...')
 
-  await $`cd .. && pwd && ls`
+  console.log($`pwd && ls`)
   
   await $`cd .. && zip -r submission.zip . -x "node_modules/*" -x "mainrun/data/*" -x "data/*"`
   
