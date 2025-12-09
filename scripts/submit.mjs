@@ -36,10 +36,8 @@ try {
   }
   
   console.log('\nCreating submission zip...')
-
-  console.log(await $`pwd && ls`)
   
-  await $`cd .. && zip -r submission.zip . -x "node_modules/*" -x "mainrun/data/*" -x "data/*"`
+  await $`cd .. && zip -r submission.zip . -x "node_modules/*" -x "mainrun/data/*" -x "data/*" -x ".venv/*"`
   
   console.log('Requesting upload URL...')
   
